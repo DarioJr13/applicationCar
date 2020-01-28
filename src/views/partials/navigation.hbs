@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/"><i class="fal fa-hand-heart"></i>Favorites Order</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+      {{#if user}}
+       
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Order
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/links">All  Order</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/links/add">Add A Order</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+       <a href="/profile" class="nav-link"><i class="fad fa-home-heart"></i></i>Profile</a>
+      </li>
+
+      <li>
+        <a href="/logout" class="nav-link"><i class="fas fa-house-leave"></i>Logout</a>
+      </li>
+       
+       {{else}}
+       <li class="nav-item">
+         <a href="/signin" class="nav-link"><i class="fas fa-users"></i>SignIn</a>
+       </li>
+       <li class="nav-item">
+         <a href="/signup" class="nav-link"><i class="fas fa-user-plus"></i>SignUp</a>
+       </li>
+      {{/if}}
+      
+      </ul>
+    </div>
+  </div>
+</nav>
